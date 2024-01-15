@@ -13,7 +13,12 @@
 \DeclareOption{11pt}{\PassOptionsToClass{\CurrentOption}{article}}
 \DeclareOption{12pt}{\PassOptionsToClass{\CurrentOption}{article}}
 
-\ExecuteOptions{10pt}
+% font type options
+\DeclareOption{sans}{\renewcommand{\familydefault}{\sfdefault}}
+\DeclareOption{roman}{\renewcommand{\familydefault}{\rmdefault}}
+\DeclareOption{helvetica}{\renewcommand{\sfdefault}{phv}}
+
+\ExecuteOptions{10pt, sans}
 
 \ProcessOptions\relax
 

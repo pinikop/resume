@@ -34,6 +34,22 @@
 %-------------------------------------------------------------------------------
 \usepackage{titling}
 \pretitle{\begin{center}\Huge\vskip -2em}
+
+%-------------------------------------------------------------------------------
+% define color scheme - Blue
+%-------------------------------------------------------------------------------
+\usepackage{xcolor}
+
+% color scheme 
+\definecolor{color0}{RGB}{0, 0, 0} % black
+\definecolor{color1}{RGB}{0, 119, 181} % light blue
+\definecolor{color2}{RGB}{100, 100, 100} % gray
+
+% icon colors
+\definecolor{colorgmail}{RGB}{212, 70, 56} % gmail red (Jasper)
+\definecolor{colorlinkedin}{RGB}{0, 119, 181} % linkeding blue
+\definecolor{colorgithub}{RGB}{36, 41, 46} % gray
+
 %-------------------------------------------------------------------------------
 % setting title layout
 %-------------------------------------------------------------------------------
@@ -41,18 +57,18 @@
 
 \newcommand{\name}[1]{\def\@name{#1}}
 \newcommand{\phone}[1]{\def\@phone{\makebox[1em][l]{\faMobile} #1}}
-\newcommand{\email}[1]{\def\@email{\makebox[1em][l]{\faEnvelope} #1}}
-\newcommand{\linkedin}[1]{\def\@linkedin{\makebox[1em][l]{\faLinkedin} #1}}
-\newcommand{\github}[1]{\def\@github{\makebox[1em][l]{\faGithub} #1}}
+\newcommand{\email}[1]{\def\@email{\makebox[1em][l]{\color{colorgmail}{\faEnvelope}} #1}}
+\newcommand{\linkedin}[1]{\def\@linkedin{\makebox[1em][l]{\color{colorlinkedin}{\faLinkedin}} #1}}
+\newcommand{\github}[1]{\def\@github{\makebox[1em][l]{\color{colorgithub}{\faGithub}} #1}}
 
 \renewcommand{\maketitle}{
     \begin{flushright}
         \begin{minipage}[c]{0.6\textwidth}
-            \Huge\textcolor{black}{\textbf{\@name}} % Use title from metadata
+            \Huge\color{color1}{\textbf{\@name}}
         \end{minipage}
         \begin{minipage}{0.25\textwidth}
             \small
-            \textcolor{gray}{
+            \textcolor{color2}{
                 \@phone \\
                 \@email\\
                 \@linkedin\\

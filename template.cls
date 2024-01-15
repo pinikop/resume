@@ -53,11 +53,11 @@
 %-------------------------------------------------------------------------------
 % setting title layout
 %-------------------------------------------------------------------------------
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
 
 \newcommand{\name}[1]{\def\@name{#1}}
-\newcommand{\phone}[1]{\def\@phone{\makebox[1em][r]{\faMobile} #1}}
-\newcommand{\email}[1]{\def\@email{\makebox[1em][r]{\color{colorgmail}{\faEnvelope}} #1}}
+\newcommand{\phone}[1]{\def\@phone{\makebox[1em][r]{\faIcon{mobile-alt}} #1}}
+\newcommand{\email}[1]{\def\@email{\makebox[1em][r]{\color{colorgmail}{\faEnvelope[regular]}} #1}}
 \newcommand{\linkedin}[1]{\def\@linkedin{\makebox[1em][r]{\color{colorlinkedin}{\faLinkedin}} #1}}
 \newcommand{\github}[1]{\def\@github{\makebox[1em][r]{\color{colorgithub}{\faGithub}} #1}}
 

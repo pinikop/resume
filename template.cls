@@ -25,4 +25,11 @@
 % % Load base class
 \LoadClass[a4paper]{article}
 
+% adjust the page margins
+\usepackage{geometry}
+\geometry{top=10mm, bottom=10mm, right=10mm, left=10mm}
+
+\usepackage{titling}
+\pretitle{\begin{center}\Huge\vskip -2em}
+    
 %% end of file `template.cls'.

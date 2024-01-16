@@ -56,15 +56,27 @@
 \usepackage{fontawesome5}
 \usepackage[hidelinks]{hyperref}
 
+\newcommand{\linkIcon}[2]{\makebox[1em][r]{\color{#2}{#1}}}  
+% usage \linkIcon{<icon>}{<color>}
+
+\newcommand{\contactDetailsRow}[3]{\linkIcon{#2}{#3} #1}  
+% usage \contactDetailsRow{<phone|email|username>}{<icon>}{<color>}
+
+%% TODO: add key-value structure to have 2 values <phone|email|username> & <phone|email|social network>
+%% TODO: make color argument optional
+\newcommand{\contactDetailsHyperLink}[4]{%  
+\href{#2#1}{\contactDetailsRow{#1}{#3}{#4}}}
+% usage \contactDetailsHyperLink{<phone|email|username>}{<URL>}{<icon>}{<color>}
+
 \newcommand{\name}[1]{\def\@name{#1}}
 \newcommand{\phone}[1]{\def\@phone{%
-    \href{tel:#1}{\makebox[1em][r]{\faIcon{mobile-alt}} #1}}}
+        \contactDetailsHyperLink{#1}{tel:}{\faIcon{mobile-alt}}{color2}}}
 \newcommand{\email}[1]{\def\@email{%
-    \href{mailto:#1}{\makebox[1em][r]{\color{colorgmail}{\faEnvelope[regular]}} #1}}}
+        \contactDetailsHyperLink{#1}{mailto:}{\faEnvelope[regular]}{colorgmail}}}
 \newcommand{\linkedin}[1]{\def\@linkedin{%
-    \href{https://www.linkedin.com/in/#1}{\makebox[1em][r]{\color{colorlinkedin}{\faLinkedin}} #1}}}
+        \contactDetailsHyperLink{#1}{https://www.linkedin.com/in/}{\faLinkedin}{colorlinkedin}}}
 \newcommand{\github}[1]{\def\@github{%
-    \href{https://github.com/#1}{\makebox[1em][r]{\color{colorgithub}{\faGithub}} #1}}}
+    \contactDetailsHyperLink{#1}{https://github.com/}{\faGithub}{colorgithub}}}
 
 % make title
 \renewcommand{\maketitle}{

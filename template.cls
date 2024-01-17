@@ -95,5 +95,13 @@
         \end{minipage}
     \end{flushright}
     }
+
+\usepackage{titlesec}
+\setcounter{secnumdepth}{0}
+
+\titleformat{\section}
+    {\color{color1}\Large\bfseries}
+    {\thesection}{}{}
+    [{\vspace{-0.15em}\titlerule[0.5pt]}]
     
 %% end of file `template.cls'.

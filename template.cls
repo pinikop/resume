@@ -99,12 +99,17 @@
     \vspace{-0.5em}
     }
 
+%-------------------------------------------------------------------------------
+% setting Sections layout
+%-------------------------------------------------------------------------------
 \usepackage{titlesec}
 \setcounter{secnumdepth}{0}
 
-\titleformat{\section}
-    {\color{color1}\Large\bfseries}
-    {\thesection}{}{}
+%-------------------------------------------------------------------------------
+% Formatting Sections titles
+%-------------------------------------------------------------------------------
+\titleformat{name=\section,numberless}
+    {\vspace{-0.75em}\color{color1}\Large\bfseries}{}{10pt}{} 
     [{\vspace{-0.15em}\titlerule[0.5pt]}]
-    
+
 %% end of file `template.cls'.

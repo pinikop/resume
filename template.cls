@@ -152,4 +152,14 @@
     \bulletSymbol\begin{minipage}[t]{\textwidth}#2\end{minipage}%
     \par\addvspace{#1}}
 
+%-------------------------------------------------------------------------------
+% skill items
+%-------------------------------------------------------------------------------
+\newcommand*{\skillItem}[3][.25em]{%
+    \begin{minipage}[t]{\textwidth}{
+        {\bfseries #2: }#3
+    }
+    \end{minipage}
+    \par\addvspace{#1}}
+
 %% end of file `template.cls'.

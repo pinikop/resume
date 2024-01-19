@@ -162,4 +162,24 @@
     \end{minipage}
     \par\addvspace{#1}}
 
+%-------------------------------------------------------------------------------
+% Setting  Education entries
+%-------------------------------------------------------------------------------
+\newcommand*{\educationEentry}[9][.5em]{
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
+        {\large\bfseries #2: #3} & {\bfseries #4}
+    \end{tabular*}\\%
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
+        {#7,  {\emph#8}} & {#5--#6}
+    \end{tabular*}%
+    \ifx&#9&%
+        \else \\%
+        \begin{minipage}[t]{\textwidth}
+            {\small #9}
+        \end{minipage}%
+    \fi
+
+    \par\addvspace{#1}
+}
+
 %% end of file `template.cls'.

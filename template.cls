@@ -112,4 +112,32 @@
     {\vspace{-0.75em}\color{color1}\Large\bfseries}{}{10pt}{} 
     [{\vspace{-0.15em}\titlerule[0.5pt]}]
 
+%-------------------------------------------------------------------------------
+% Setting  Experience entries
+%-------------------------------------------------------------------------------
+\newcommand*{\experienceEentry}[7][.5em]{
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
+        {{\large\bfseries #2}\  %
+        \emph{
+            \ifstrempty{#4}
+                {\ifstrempty{#5}{}{#5}}
+                {\ifstrempty{#5}{#4}{#4, #5}}
+                }
+            } & {\bfseries #3}
+    \end{tabular*}%
+    \ifx&#6&%
+        \else{\\%
+            \begin{minipage}{\textwidth}%
+                {\small#6}%
+            \end{minipage}}
+    \fi%
+    \ifx&#7&%
+        \else{\\%
+        \begin{minipage}{\textwidth}%
+            \vspace{#1}
+            #7%
+        \end{minipage}}\fi%
+    \par\addvspace{#1}
+}
+
 %% end of file `template.cls'.

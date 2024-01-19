@@ -11,6 +11,7 @@
 \DeclareOption{10pt}{\PassOptionsToClass{\CurrentOption}{article}}
 \DeclareOption{11pt}{\PassOptionsToClass{\CurrentOption}{article}}
 \DeclareOption{12pt}{\PassOptionsToClass{\CurrentOption}{article}}
+
 % font type options
 \DeclareOption{sans}{\renewcommand{\familydefault}{\sfdefault}}
 \DeclareOption{roman}{\renewcommand{\familydefault}{\rmdefault}}
@@ -70,13 +71,13 @@
 
 \newcommand{\name}[1]{\def\@name{#1}}
 \newcommand{\phone}[1]{\def\@phone{%
-        \contactDetailsHyperLink{#1}{tel:}{\faIcon{mobile-alt}}{color2}}}
+        \contactDetailsHyperLink{#1}{tel:}{\faIcon{mobile-alt}}{color2}\\}}
 \newcommand{\email}[1]{\def\@email{%
-        \contactDetailsHyperLink{#1}{mailto:}{\faEnvelope[regular]}{colorgmail}}}
+        \contactDetailsHyperLink{#1}{mailto:}{\faEnvelope[regular]}{colorgmail}\\}}
 \newcommand{\linkedin}[1]{\def\@linkedin{%
-        \contactDetailsHyperLink{#1}{https://www.linkedin.com/in/}{\faLinkedin}{colorlinkedin}}}
+        \contactDetailsHyperLink{#1}{https://www.linkedin.com/in/}{\faLinkedin}{colorlinkedin}\\}}
 \newcommand{\github}[1]{\def\@github{%
-    \contactDetailsHyperLink{#1}{https://github.com/}{\faGithub}{colorgithub}}}
+    \contactDetailsHyperLink{#1}{https://github.com/}{\faGithub}{colorgithub}\\}}
 
 % make title
 \renewcommand{\maketitle}{
@@ -87,13 +88,14 @@
         \begin{minipage}{0.25\textwidth}
             \small
             \textcolor{color2}{
-                \@phone \\
-                \@email\\
-                \@linkedin\\
-                \@github\\
+                \@phone
+                \@email
+                \@linkedin
+                \@github
                 }
         \end{minipage}
     \end{flushright}
+    \vspace{-0.5em}
     }
 
 \usepackage{titlesec}

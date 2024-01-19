@@ -140,4 +140,16 @@
     \par\addvspace{#1}
 }
 
+%-------------------------------------------------------------------------------
+% define bullet symbole
+%-------------------------------------------------------------------------------
+\usepackage{marvosym}
+\newcommand*{\bulletSymbol}{\makebox[1.5em][l]{\strut{\color{color1}\large\Neutral}}}
+%-------------------------------------------------------------------------------
+% setting Sections layout
+%-------------------------------------------------------------------------------
+\newcommand*{\cvItem}[2][.25em]{%
+    \bulletSymbol\begin{minipage}[t]{\textwidth}#2\end{minipage}%
+    \par\addvspace{#1}}
+
 %% end of file `template.cls'.

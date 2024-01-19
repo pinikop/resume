@@ -115,27 +115,27 @@
 %-------------------------------------------------------------------------------
 % Setting  Experience entries
 %-------------------------------------------------------------------------------
-\newcommand*{\experienceEentry}[7][.5em]{
+\newcommand*{\experienceEentry}[8][.5em]{
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
         {{\large\bfseries #2}\  %
         \emph{
-            \ifstrempty{#4}
-                {\ifstrempty{#5}{}{#5}}
-                {\ifstrempty{#5}{#4}{#4, #5}}
+            \ifstrempty{#5}
+                {\ifstrempty{#6}{}{#6}}
+                {\ifstrempty{#6}{#5}{#5, #6}}
                 }
-            } & {\bfseries #3}
+            } & {\bfseries #3--#4}
     \end{tabular*}%
-    \ifx&#6&%
+    \ifx&#7&%
         \else{\\%
             \begin{minipage}{\textwidth}%
-                {\small#6}%
+                {\small#7}%
             \end{minipage}}
     \fi%
-    \ifx&#7&%
+    \ifx&#8&%
         \else{\\%
         \begin{minipage}{\textwidth}%
             \vspace{#1}
-            #7%
+            #8%
         \end{minipage}}\fi%
     \par\addvspace{#1}
 }

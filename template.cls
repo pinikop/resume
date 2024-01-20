@@ -167,7 +167,8 @@
 %-------------------------------------------------------------------------------
 \newcommand*{\educationEentry}[9][.5em]{
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
-        {\large\bfseries #2: #3} & {\bfseries #4}
+        {\large\bfseries 
+        \ifstrempty{#2}{#3}{#2, #3}} & {\bfseries #4}
     \end{tabular*}\\%
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
         {#7,  {\emph#8}} & {#5--#6}
@@ -175,10 +176,10 @@
     \ifx&#9&%
         \else \\%
         \begin{minipage}[t]{\textwidth}
+            % TODO: fix indentation
             {\small #9}
         \end{minipage}%
     \fi
-
     \par\addvspace{#1}
 }
 

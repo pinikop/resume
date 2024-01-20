@@ -155,7 +155,7 @@
 %-------------------------------------------------------------------------------
 % skill items
 %-------------------------------------------------------------------------------
-\newcommand*{\skillItem}[4][.25em]{%
+\newcommand*{\cvItem}[4][.25em]{%
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
         {{\bfseries #2: }#3} & {\ifstrempty{#4}{}{\bfseries #4}}
     \end{tabular*}

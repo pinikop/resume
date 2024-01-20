@@ -163,7 +163,7 @@
 }
 
 %-------------------------------------------------------------------------------
-% Setting  Education entries
+% Setting Education entries
 %-------------------------------------------------------------------------------
 \newcommand*{\educationEentry}[9][.5em]{
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%

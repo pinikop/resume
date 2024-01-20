@@ -155,12 +155,12 @@
 %-------------------------------------------------------------------------------
 % skill items
 %-------------------------------------------------------------------------------
-\newcommand*{\skillItem}[3][.25em]{%
-    \begin{minipage}[t]{\textwidth}{
-        {\bfseries #2: }#3
-    }
-    \end{minipage}
-    \par\addvspace{#1}}
+\newcommand*{\skillItem}[4][.25em]{%
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
+        {{\bfseries #2: }#3} & {\ifstrempty{#4}{}{\bfseries #4}}
+    \end{tabular*}
+    \par\addvspace{#1}
+}
 
 %-------------------------------------------------------------------------------
 % Setting  Education entries

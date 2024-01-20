@@ -148,7 +148,7 @@
 %-------------------------------------------------------------------------------
 % setting Sections layout
 %-------------------------------------------------------------------------------
-\newcommand*{\cvItem}[2][.25em]{%
+\newcommand*{\cvBullet}[2][.25em]{%
     \bulletSymbol\begin{minipage}[t]{\textwidth}#2\end{minipage}%
     \par\addvspace{#1}}
 

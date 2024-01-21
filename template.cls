@@ -115,7 +115,7 @@
 %-------------------------------------------------------------------------------
 % Setting  Experience entries
 %-------------------------------------------------------------------------------
-\newcommand*{\experienceEentry}[8][.5em]{
+\newcommand*{\experienceEentry}[8][.2em]{
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
         {{\large\bfseries #2}\  %
         \emph{
@@ -188,4 +188,5 @@
     \hfill\small{**\emph{Recommendations} will be provided upon request}
 }
 
+\pagestyle{empty}
 %% end of file `template.cls'.

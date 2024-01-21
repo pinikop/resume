@@ -30,7 +30,7 @@
 % adjust the page margins
 %-------------------------------------------------------------------------------
 \usepackage{geometry}
-\geometry{top=10mm, bottom=10mm, right=10mm, left=10mm}
+\geometry{top=10mm, bottom=5mm, right=10mm, left=10mm}
 %-------------------------------------------------------------------------------
 % adjust title location
 %-------------------------------------------------------------------------------
@@ -181,6 +181,11 @@
         \end{minipage}%
     \fi
     \par\addvspace{#1}
+}
+
+\newcommand{\recommendations}{
+    \vfill
+    \hfill\small{**\emph{Recommendations} will be provided upon request}
 }
 
 %% end of file `template.cls'.

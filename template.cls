@@ -183,10 +183,16 @@
     \par\addvspace{#1}
 }
 
+%-------------------------------------------------------------------------------
+% Recommmendations
+%-------------------------------------------------------------------------------
 \newcommand{\recommendations}{
     \vfill
     \hfill\small{**\emph{Recommendations} will be provided upon request}
 }
 
+%-------------------------------------------------------------------------------
+% Disable page numbering
+%-------------------------------------------------------------------------------
 \pagestyle{empty}
 %% end of file `template.cls'.

@@ -29,18 +29,18 @@
 %-------------------------------------------------------------------------------
 % adjust the page margins
 %-------------------------------------------------------------------------------
-\usepackage{geometry}
+\RequirePackage{geometry}
 \geometry{top=10mm, bottom=5mm, right=10mm, left=10mm}
 %-------------------------------------------------------------------------------
 % adjust title location
 %-------------------------------------------------------------------------------
-\usepackage{titling}
+\RequirePackage{titling}
 \pretitle{\begin{center}\Huge\vskip -2em}
 
 %-------------------------------------------------------------------------------
 % define color scheme - Blue
 %-------------------------------------------------------------------------------
-\usepackage{xcolor}
+\RequirePackage{xcolor}
 
 % color scheme 
 \definecolor{color0}{RGB}{0, 0, 0} % black
@@ -55,8 +55,8 @@
 %-------------------------------------------------------------------------------
 % setting title layout
 %-------------------------------------------------------------------------------
-\usepackage{fontawesome5}
-\usepackage[hidelinks]{hyperref}
+\RequirePackage{fontawesome5}
+\RequirePackage[hidelinks]{hyperref}
 
 \newcommand{\linkIcon}[2]{\makebox[1em][r]{\color{#2}{#1}}}  
 % usage \linkIcon{<icon>}{<color>}
@@ -102,7 +102,7 @@
 %-------------------------------------------------------------------------------
 % setting Sections layout
 %-------------------------------------------------------------------------------
-\usepackage{titlesec}
+\RequirePackage{titlesec}
 \setcounter{secnumdepth}{0}
 
 %-------------------------------------------------------------------------------
@@ -143,7 +143,7 @@
 %-------------------------------------------------------------------------------
 % define bullet symbole
 %-------------------------------------------------------------------------------
-\usepackage{marvosym}
+\RequirePackage{marvosym}
 \newcommand*{\bulletSymbol}{\makebox[1.5em][l]{\strut{\color{color1}\large\Neutral}}}
 %-------------------------------------------------------------------------------
 % setting Sections layout

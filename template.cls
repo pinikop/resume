@@ -118,11 +118,9 @@
 \newcommand*{\experienceEentry}[8][.2em]{
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
         {{\large\bfseries #2}\  %
-        \emph{
             \ifstrempty{#5}
                 {\ifstrempty{#6}{}{#6}}
-                {\ifstrempty{#6}{#5}{#5, #6}}
-                }
+                {\ifstrempty{#6}{\emph{#5}}{\emph{#5}, #6}}
             } & {\bfseries #3--#4}
     \end{tabular*}%
     \ifx&#7&%

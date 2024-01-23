@@ -25,7 +25,14 @@
 % Load base class
 %-------------------------------------------------------------------------------
 \LoadClass[a4paper]{article}
-\setlength{\parindent}{0pt}
+%-------------------------------------------------------------------------------
+% set lengths
+%-------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}  % no indentation of paragraph
+\newlength{\titleSpacing} \setlength{\titleSpacing}{-3ex}
+\newlength{\sectionSpacing} \setlength{\sectionSpacing}{-2ex}
+\newlength{\entrySpacing} \setlength{\entrySpacing}{1ex}
+\newlength{\bulletSpacing} \setlength{\bulletSpacing}{0.3ex}
 %-------------------------------------------------------------------------------
 % adjust the page margins
 %-------------------------------------------------------------------------------
@@ -96,7 +103,7 @@
                 }
         \end{minipage}
     \end{flushright}
-    \vspace{-0.5em}
+    \vspace{\titleSpacing}
     }
 
 %-------------------------------------------------------------------------------
@@ -109,13 +116,13 @@
 % Formatting Sections titles
 %-------------------------------------------------------------------------------
 \titleformat{name=\section,numberless}
-    {\vspace{-0.75em}\color{color1}\Large\bfseries}{}{10pt}{} 
-    [{\vspace{-0.15em}\titlerule[0.5pt]}]
+    {\vspace{\sectionSpacing}\color{color1}\Large\bfseries}{}{10pt}{} 
+    [{\vspace{-0.15ex}\titlerule[0.5pt]}]
 
 %-------------------------------------------------------------------------------
 % Setting  Experience entries
 %-------------------------------------------------------------------------------
-\newcommand*{\experienceEentry}[8][.2em]{
+\newcommand*{\experienceEentry}[8][\entrySpacing]{
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
         {{\large\bfseries #2}\  %
             \ifstrempty{#5}
@@ -132,7 +139,7 @@
     \ifx&#8&%
         \else{\\%
         \begin{minipage}{\textwidth}%
-            \vspace{#1}
+            % \vspace{#1}
             #8%
         \end{minipage}}\fi%
     \par\addvspace{#1}
@@ -146,14 +153,14 @@
 %-------------------------------------------------------------------------------
 % setting Sections layout
 %-------------------------------------------------------------------------------
-\newcommand*{\cvBullet}[2][.25em]{%
+\newcommand*{\cvBullet}[2][\bulletSpacing]{%
     \bulletSymbol\begin{minipage}[t]{\textwidth}#2\end{minipage}%
     \par\addvspace{#1}}
 
 %-------------------------------------------------------------------------------
 % skill items
 %-------------------------------------------------------------------------------
-\newcommand*{\cvItem}[4][.25em]{%
+\newcommand*{\cvItem}[4][\bulletSpacing]{%
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
         {{\bfseries #2: }#3} & {\ifstrempty{#4}{}{\bfseries #4}}
     \end{tabular*}
@@ -163,7 +170,7 @@
 %-------------------------------------------------------------------------------
 % Setting Education entries
 %-------------------------------------------------------------------------------
-\newcommand*{\educationEentry}[9][.5em]{
+\newcommand*{\educationEentry}[9][\entrySpacing]{
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
         {\large\bfseries 
         \ifstrempty{#2}{#3}{#2, #3}} & {\bfseries #4}

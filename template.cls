@@ -116,7 +116,7 @@
 %-------------------------------------------------------------------------------
 % Setting  Experience entries
 %-------------------------------------------------------------------------------
-\newcommand*{\experienceEentry}[8][\entrySpacing]{
+\newcommand*{\experienceEntry}[8][\entrySpacing]{
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
         {{\large\bfseries #2}\
             \ifstrempty{#5}

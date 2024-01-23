@@ -124,15 +124,9 @@
                 {\ifstrempty{#6}{\emph{#5}}{\emph{#5}, #6}}
             } & {\bfseries #3--#4}
     \end{tabular*}
-    \ifx&#7&
-        \else \\
-                {\small#7}
-    \fi
-    \ifx&#8&
-        \else \\
-                #8
-    \fi
-    \par\addvspace{#1}
+    \ifstrempty{#7}{}{{\small #7}}
+    \ifstrempty{#8}{}{#8}
+    \par\addvspace{\entrySpacing}
 }
 
 %-------------------------------------------------------------------------------
@@ -170,11 +164,7 @@
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
         {#7,  \emph{#8}} & {#5--#6}
     \end{tabular*}
-    \ifx&#9&
-            \else \\
-                % TODO: fix indentation
-                {\small #9}
-    \fi
+    \ifstrempty{#9}{}{{#9}} % TODO: fix indentation
     \par\addvspace{#1}
 }
 

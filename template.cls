@@ -125,16 +125,17 @@
             } & {\bfseries #3--#4}
     \end{tabular*}
     \ifx&#7&
-        \else{\\
+        \else \\
             \begin{minipage}{\textwidth}
                 {\small#7}
-            \end{minipage}}
+            \end{minipage}
     \fi
     \ifx&#8&
-        \else{\\
+        \else \\
             \begin{minipage}{\textwidth}
                 #8
-            \end{minipage}}\fi
+            \end{minipage}
+    \fi
     \par\addvspace{#1}
 }
 

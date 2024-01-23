@@ -124,7 +124,7 @@
                 {\ifstrempty{#6}{\emph{#5}}{\emph{#5}, #6}}
             } & {\bfseries #3--#4}
     \end{tabular*}
-    \ifstrempty{#7}{\unskip}{\\[0.5ex] \small #7}
+    \ifstrempty{#7}{\unskip}{\\[0.5ex] \makebox[1.5ex]\small #7}  % HACK: \makebox is a hack to fix indentation
     \ifstrempty{#8}{\unskip}{\\[0.5ex] #8}
     \par\addvspace{#1}
 }
@@ -165,7 +165,7 @@
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
         {#7,  \emph{#8}} & {#5--#6}
     \end{tabular*}
-    \ifstrempty{#9}{\unskip}{\\[0.5px]#9} % TODO: fix indentation
+    \ifstrempty{#9}{\unskip}{\\[0.5px] \makebox[1.5ex]{}#9} % HACK: \makebox is a hack to fix indentation
     \par\addvspace{#1}
 }
 

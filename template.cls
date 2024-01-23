@@ -165,7 +165,7 @@
 %-------------------------------------------------------------------------------
 % Setting Education entries
 %-------------------------------------------------------------------------------
-\newcommand*{\educationEentry}[9][\entrySpacing]{
+\newcommand*{\educationEntry}[9][\entrySpacing]{
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
         {\large\bfseries 
         \ifstrempty{#2}{#3}{#2, #3}} & {\bfseries #4}

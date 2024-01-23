@@ -126,15 +126,11 @@
     \end{tabular*}
     \ifx&#7&
         \else \\
-            % \begin{minipage}{\textwidth}
                 {\small#7}
-            % \end{minipage}
     \fi
     \ifx&#8&
         \else \\
-            % \begin{minipage}{\textwidth}
                 #8
-            % \end{minipage}
     \fi
     \par\addvspace{#1}
 }
@@ -176,10 +172,8 @@
     \end{tabular*}
     \ifx&#9&
             \else \\
-            % \begin{minipage}[t]{\textwidth}
                 % TODO: fix indentation
                 {\small #9}
-            % \end{minipage}
     \fi
     \par\addvspace{#1}
 }

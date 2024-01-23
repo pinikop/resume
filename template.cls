@@ -124,10 +124,11 @@
                 {\ifstrempty{#6}{\emph{#5}}{\emph{#5}, #6}}
             } & {\bfseries #3--#4}
     \end{tabular*}
-    \ifstrempty{#7}{}{{\small #7}}
-    \ifstrempty{#8}{}{#8}
-    \par\addvspace{\entrySpacing}
+    \ifstrempty{#7}{\unskip}{\\[0.5ex] \small #7}
+    \ifstrempty{#8}{\unskip}{\\[0.5ex] #8}
+    \par\addvspace{#1}
 }
+
 
 %-------------------------------------------------------------------------------
 % define bullet symbole
@@ -164,7 +165,7 @@
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
         {#7,  \emph{#8}} & {#5--#6}
     \end{tabular*}
-    \ifstrempty{#9}{}{{#9}} % TODO: fix indentation
+    \ifstrempty{#9}{\unskip}{\\[0.5px]#9} % TODO: fix indentation
     \par\addvspace{#1}
 }
 

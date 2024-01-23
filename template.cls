@@ -139,9 +139,7 @@
 % setting Sections layout
 %-------------------------------------------------------------------------------
 \newcommand*{\cvBullet}[2][\bulletSpacing]{
-    \bulletSymbol\begin{minipage}[t]{\textwidth}
-        #2
-    \end{minipage}
+    \bulletSymbol\ #2
     \par\addvspace{#1}}
 
 %-------------------------------------------------------------------------------

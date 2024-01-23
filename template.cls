@@ -38,11 +38,6 @@
 %-------------------------------------------------------------------------------
 \RequirePackage{geometry}
 \geometry{top=10mm, bottom=5mm, right=10mm, left=10mm}
-%-------------------------------------------------------------------------------
-% adjust title location
-%-------------------------------------------------------------------------------
-\RequirePackage{titling}
-\pretitle{\begin{center}\Huge\vskip -2em}
 
 %-------------------------------------------------------------------------------
 % define color scheme - Blue
@@ -73,29 +68,28 @@
 
 %% TODO: add key-value structure to have 2 values <phone|email|username> & <phone|email|social network>
 %% TODO: make color argument optional
-\newcommand{\contactDetailsHyperLink}[4]{%  
+\newcommand{\contactDetailsHyperLink}[4]{
 \href{#2#1}{\contactDetailsRow{#1}{#3}{#4}}}
 % usage \contactDetailsHyperLink{<phone|email|username>}{<URL>}{<icon>}{<color>}
 
 \newcommand{\name}[1]{\def\@name{#1}}
-\newcommand{\phone}[1]{\def\@phone{%
+\newcommand{\phone}[1]{\def\@phone{
         \contactDetailsHyperLink{#1}{tel:}{\faIcon{mobile-alt}}{color2}\\}}
-\newcommand{\email}[1]{\def\@email{%
+\newcommand{\email}[1]{\def\@email{
         \contactDetailsHyperLink{#1}{mailto:}{\faEnvelope[regular]}{colorgmail}\\}}
-\newcommand{\linkedin}[1]{\def\@linkedin{%
+\newcommand{\linkedin}[1]{\def\@linkedin{
         \contactDetailsHyperLink{#1}{https://www.linkedin.com/in/}{\faLinkedin}{colorlinkedin}\\}}
-\newcommand{\github}[1]{\def\@github{%
+\newcommand{\github}[1]{\def\@github{
     \contactDetailsHyperLink{#1}{https://github.com/}{\faGithub}{colorgithub}\\}}
 
 % make title
 \renewcommand{\maketitle}{
     \begin{flushright}
         \begin{minipage}[c]{0.6\textwidth}
-            \Huge\color{color1}{\textbf{\@name}}
+            \color{color1}\Huge\textbf{\@name}
         \end{minipage}
         \begin{minipage}{0.25\textwidth}
-            \small
-            \textcolor{color2}{
+            \small\textcolor{color2}{
                 \@phone
                 \@email
                 \@linkedin
@@ -123,25 +117,24 @@
 % Setting  Experience entries
 %-------------------------------------------------------------------------------
 \newcommand*{\experienceEentry}[8][\entrySpacing]{
-    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
-        {{\large\bfseries #2}\  %
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+        {{\large\bfseries #2}\
             \ifstrempty{#5}
                 {\ifstrempty{#6}{}{#6}}
                 {\ifstrempty{#6}{\emph{#5}}{\emph{#5}, #6}}
             } & {\bfseries #3--#4}
-    \end{tabular*}%
-    \ifx&#7&%
-        \else{\\%
-            \begin{minipage}{\textwidth}%
-                {\small#7}%
+    \end{tabular*}
+    \ifx&#7&
+        \else{\\
+            \begin{minipage}{\textwidth}
+                {\small#7}
             \end{minipage}}
-    \fi%
-    \ifx&#8&%
-        \else{\\%
-        \begin{minipage}{\textwidth}%
-            % \vspace{#1}
-            #8%
-        \end{minipage}}\fi%
+    \fi
+    \ifx&#8&
+        \else{\\
+            \begin{minipage}{\textwidth}
+                #8
+            \end{minipage}}\fi
     \par\addvspace{#1}
 }
 
@@ -153,15 +146,17 @@
 %-------------------------------------------------------------------------------
 % setting Sections layout
 %-------------------------------------------------------------------------------
-\newcommand*{\cvBullet}[2][\bulletSpacing]{%
-    \bulletSymbol\begin{minipage}[t]{\textwidth}#2\end{minipage}%
+\newcommand*{\cvBullet}[2][\bulletSpacing]{
+    \bulletSymbol\begin{minipage}[t]{\textwidth}
+        #2
+    \end{minipage}
     \par\addvspace{#1}}
 
 %-------------------------------------------------------------------------------
 % skill items
 %-------------------------------------------------------------------------------
-\newcommand*{\cvItem}[4][\bulletSpacing]{%
-    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
+\newcommand*{\cvItem}[4][\bulletSpacing]{
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
         {{\bfseries #2: }#3} & {\ifstrempty{#4}{}{\bfseries #4}}
     \end{tabular*}
     \par\addvspace{#1}
@@ -171,19 +166,19 @@
 % Setting Education entries
 %-------------------------------------------------------------------------------
 \newcommand*{\educationEentry}[9][\entrySpacing]{
-    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
         {\large\bfseries 
         \ifstrempty{#2}{#3}{#2, #3}} & {\bfseries #4}
-    \end{tabular*}\\%
-    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
+    \end{tabular*}\\
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
         {#7,  {\emph#8}} & {#5--#6}
-    \end{tabular*}%
-    \ifx&#9&%
-        \else \\%
-        \begin{minipage}[t]{\textwidth}
-            % TODO: fix indentation
-            {\small #9}
-        \end{minipage}%
+    \end{tabular*}
+    \ifx&#9&
+            \else \\
+            \begin{minipage}[t]{\textwidth}
+                % TODO: fix indentation
+                {\small #9}
+            \end{minipage}
     \fi
     \par\addvspace{#1}
 }

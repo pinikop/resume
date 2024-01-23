@@ -171,7 +171,7 @@
         \ifstrempty{#2}{#3}{#2, #3}} & {\bfseries #4}
     \end{tabular*}\\
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-        {#7,  {\emph#8}} & {#5--#6}
+        {#7,  \emph{#8}} & {#5--#6}
     \end{tabular*}
     \ifx&#9&
             \else \\

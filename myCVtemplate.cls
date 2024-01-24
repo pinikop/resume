@@ -2,7 +2,7 @@
 %                identification
 %-------------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{template}[2022/01/01 My Custom Template]
+\ProvidesClass{myCVtemplate}[2022/01/01 My Custom Template]
 
 %-------------------------------------------------------------------------------
 %                class options

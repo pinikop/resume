@@ -12,4 +12,5 @@
 *.xdv
 
 # myCV.tex output
-myCV.pdf
+*.pdf
+!PiniKoplovitchCV.pdf

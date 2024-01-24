@@ -29,7 +29,7 @@
 % set lengths
 %-------------------------------------------------------------------------------
 \setlength{\parindent}{0pt}  % no indentation of paragraph
-\newlength{\titleSpacing} \setlength{\titleSpacing}{-3ex}
+\newlength{\titleSpacing} \setlength{\titleSpacing}{-2ex}
 \newlength{\sectionSpacing} \setlength{\sectionSpacing}{-2ex}
 \newlength{\entrySpacing} \setlength{\entrySpacing}{1ex}
 \newlength{\bulletSpacing} \setlength{\bulletSpacing}{0.3ex}
@@ -145,10 +145,17 @@
 %-------------------------------------------------------------------------------
 % skill items
 %-------------------------------------------------------------------------------
-\newcommand*{\cvItem}[4][\bulletSpacing]{
+\newcommand*{\skillItemSingle}[4][\bulletSpacing]{
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
         {{\bfseries #2: }#3} & {\ifstrempty{#4}{}{\bfseries #4}}
     \end{tabular*}
+    \par\addvspace{#1}
+}
+
+\newcommand*{\skillItemDouble}[5][\bulletSpacing]{
+        \begin{tabular}{ll}
+            {\bfseries #2: }#3 & {\bfseries #4: }#5
+        \end{tabular}
     \par\addvspace{#1}
 }
 

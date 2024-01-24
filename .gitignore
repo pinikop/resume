@@ -1,3 +1,5 @@
+.vscode
+
 # general latex build output files
 *.aux
 *.bbl
@@ -9,6 +11,5 @@
 *.synctex.gz
 *.xdv
 
-# template.tex output
-# move to *.pdf once manual is done
-template.pdf
+# myCV.tex output
+myCV.pdf

@@ -1,3 +1,12 @@
+%% myCVtemplate.cls
+%% Copyright 2024 Pini Koplovitch
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+%
+% This work consists of the files myCVtemplate.cls and myCV.tex.
+
 %-------------------------------------------------------------------------------
 %                identification
 %-------------------------------------------------------------------------------

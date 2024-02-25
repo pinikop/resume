@@ -140,10 +140,11 @@
 
 
 %-------------------------------------------------------------------------------
-% define bullet symbole
+% define bullet symbole  %TODO: make it a parameter\option or theme
 %-------------------------------------------------------------------------------
 \RequirePackage{marvosym}
-\newcommand*{\bulletSymbol}{\makebox[1.5em][l]{\strut{\color{color1}\large\Neutral}}}
+% \newcommand*{\bulletSymbol}{\makebox[1.5em][l]{\strut{\color{color1}\large\Neutral}}}
+\newcommand*{\bulletSymbol}{\makebox[1.5em][l]{\strut{\color{color1}\scriptsize\CircSteel}}}
 %-------------------------------------------------------------------------------
 % setting Sections layout
 %-------------------------------------------------------------------------------

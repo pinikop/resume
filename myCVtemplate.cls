@@ -83,31 +83,41 @@
 
 \newcommand{\name}[1]{\def\@name{#1}}
 \newcommand{\phone}[1]{\def\@phone{
-        \contactDetailsHyperLink{#1}{tel:}{\faIcon{mobile-alt}}{color2}\\}}
+        \contactDetailsHyperLink{#1}{tel:}{\faIcon{mobile-alt}}{color2}}}
 \newcommand{\email}[1]{\def\@email{
-        \contactDetailsHyperLink{#1}{mailto:}{\faEnvelope[regular]}{colorgmail}\\}}
+        \contactDetailsHyperLink{#1}{mailto:}{\faEnvelope[regular]}{colorgmail}}}
 \newcommand{\linkedin}[1]{\def\@linkedin{
-        \contactDetailsHyperLink{#1}{https://www.linkedin.com/in/}{\faLinkedin}{colorlinkedin}\\}}
+        \contactDetailsHyperLink{#1}{https://www.linkedin.com/in/}{\faLinkedin}{colorlinkedin}}}
 \newcommand{\github}[1]{\def\@github{
-    \contactDetailsHyperLink{#1}{https://github.com/}{\faGithub}{colorgithub}\\}}
+    \contactDetailsHyperLink{#1}{https://github.com/}{\faGithub}{colorgithub}}}
 
-% make title
+% make title %TODO: make it a parameter\option or theme
+
+% \renewcommand{\maketitle}{
+%     \begin{flushright}
+%         \begin{minipage}[c]{0.6\textwidth}
+%             \color{color1}\Huge\textbf{\@name}
+%         \end{minipage}
+%         \begin{minipage}{0.25\textwidth}
+%             \small\textcolor{color2}{
+%                 \@phone \\
+%                 \@email \\
+%                 \@linkedin \\
+%                 \@github \\
+%                 }
+%         \end{minipage}
+%     \end{flushright}
+%     \vspace{\titleSpacing}
+%     }
+
 \renewcommand{\maketitle}{
-    \begin{flushright}
-        \begin{minipage}[c]{0.6\textwidth}
-            \color{color1}\Huge\textbf{\@name}
-        \end{minipage}
-        \begin{minipage}{0.25\textwidth}
-            \small\textcolor{color2}{
-                \@phone
-                \@email
-                \@linkedin
-                \@github
-                }
-        \end{minipage}
-    \end{flushright}
-    \vspace{\titleSpacing}
-    }
+    \hspace*{\fill}
+    {\color{color1}\Huge\textbf{\@name}}
+    \hspace*{\fill} \\
+    \begin{minipage}[c]{\textwidth}
+        \centering \@phone \@email \@linkedin \@github
+    \end{minipage} \\
+}
 
 %-------------------------------------------------------------------------------
 % setting Sections layout

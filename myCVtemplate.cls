@@ -41,7 +41,7 @@
 \newlength{\titleSpacing} \setlength{\titleSpacing}{-2ex}
 \newlength{\sectionSpacing} \setlength{\sectionSpacing}{-2ex}
 \newlength{\entrySpacing} \setlength{\entrySpacing}{1ex}
-\newlength{\bulletSpacing} \setlength{\bulletSpacing}{0.3ex}
+\newlength{\bulletSpacing} \setlength{\bulletSpacing}{0.5ex}
 %-------------------------------------------------------------------------------
 % adjust the page margins
 %-------------------------------------------------------------------------------
@@ -115,7 +115,7 @@
     {\color{color1}\Huge\textbf{\@name}}
     \hspace*{\fill} \\
     \begin{minipage}[c]{\textwidth}
-        \centering \@phone \@email \@linkedin \@github
+        \centering \@phone \@email \@linkedin %\@github
     \end{minipage} \\
 }
 

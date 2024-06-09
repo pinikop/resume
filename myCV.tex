@@ -14,12 +14,21 @@
 \title{Pini Koplovitch}
 \author{Pini Koplovitch}
 \name{Pini Koplovitch}
-\phone{0528321812}
+\phone{052--8321812}
 \email{pini.koplovitch@gmail.com}
 \linkedin{pini-koplovitch} 
 \github{pinikop}
 
 \def\experience{3}
+
+% \geometry{top=10mm, bottom=10mm, right=15mm, left=15mm}
+
+\setlength{\sectionSpacing}{-1ex}
+\setlength{\entrySpacing}{2ex}
+\setlength{\bulletSpacing}{1ex}
+% \setlength{\sectionSpacing}{-2ex}
+% \setlength{\entrySpacing}{1.5ex}
+% \setlength{\bulletSpacing}{0.75ex}
 
 \begin{document}
     \maketitle
@@ -35,66 +44,139 @@
     % including multiple awards for academic achievement and 2 publications in top journals in the field.
     % Looking for exciting Data Science positions, enjoys working in a dynamic and delivery-oriented environment.
 
-    \cvBullet{Results-driven Data Scientist and an Algorithm Developer with \experience\raisebox{.2ex}{\scriptsize{+}} years' experience in Machine and Deep Learning (ML, DL)}
-    \cvBullet{Led development of algorithms for multiple domains including Computer Vision, Signal Processing and for Data Analysis}
-    \cvBullet{Quickly delivers value through hands-on ML engineering, strong coding skills, and passion for continuous learning}
-    \cvBullet{Published and awarded for academic achievements in Computational Neuroscience} 
-    \cvBullet{Seeking data-focused role to leverage analytical mindset}
+    \cvBullet{
+        Results-driven Data Scientist and Algorithm Developer with demonstrated 
+        success in Machine \& Deep Learning projects
+        }
+    \cvBullet{Led development of algorithms for multiple domains including 
+        Computer Vision, Signal Processing and for Data Analysis
+        }
+    % \cvBullet{Experienced in analyzing neuronal activity, vital signs, \& performing sensor fusion on physiological signals from various sensors}
+    \cvBullet{Proven track record of delivering performance-enhancing solutions, 
+        from ideation to implementation
+        }
+    \cvBullet{Published and awarded for academic achievements in 
+        Computational Neuroscience
+        } 
+    % \cvBullet{Quickly delivers value through hands-on ML engineering, strong coding skills, and passion for continuous learning}
+    % \cvBullet{Seeking data-focused role to leverage analytical mindset}
     % Results-driven Data Scientist and an Algorithm Developer with \experience\raisebox{.2ex}{\scriptsize{+}} years' experience in Machine and Deep Learning (ML, DL). \\
     % Led development of algorithms for multiple domains including Computer Vision, Signal Processing and for Data Analysis. \\
     % Quickly delivers value through hands-on ML engineering, strong coding skills, and passion for continuous learning.
     % Published and awarded for academic achievements in Computational Neuroscience. Seeking data-focused role to leverage analytical mindset.
-    
-    \section{Education}{
-        \educationEntry{}{YDATA Program}{Graduated with Honors}
-            {2019}{2020}{Yandex advanced Data Science program}{Tel Aviv}{}
-        \educationEntry{M.Sc.}{Brain Sciences: Computation and Information Processing}{GPA 96.2}
-            {2011}{2016}{The Edmond and Lily Safra Center for Brain Sciences, Hebrew University of Jerusalem}{Jerusalem}
-            {Under the supervision of Prof.\ Marshall Devor; Studied the Neuronal Mechanisms of Neuropathic Pain.}
-        \educationEntry{B.Sc.}{Cognitive Science; Life Sciences: ``ETGAR'' Honor's Program}{Magna Cum Laude, 94.3}
-            {2008}{2010}{The Hebrew University of Jerusalem}{Jerusalem}{}
-    }
 
-    \section{Relevant Experience}{%
-        \experienceEntry{Algorithm Developer}{6/2022}{6/2023}{Neteera}{Jerusalem}{}{
-            \cvBullet{Led research-to-production development of a Motion-Detection algorithm for patient monitoring from radar signals}
-            \cvBullet{Leveraged Weights\&Biases for end-to-end experiment tracking, visualization and Data \& Models Versioning; \\ set up examples and provided training to encourage adoption of the framework by the Algo team}
-            \cvBullet{ML engineered Apnea-Detection DL project; implemented modular code \& configuration files to enable flexibility plugin-in alternative components like losses, architectures, metrics. This simplified experimentation and hyperparameter tuning}
+    % \section{Volunteering}{%
+    %     \experienceEntry{}{October 2023}{Present}{Hostage and Missing Family forum}{Jerusalem}{}{
+    %         \cvBullet{}
+    %     }
+    % }
+    \section{Experience}{%
+        \experienceEntry{Data Scientist}{2022}{2023}{Neteera}{Jerusalem}{}{
+            \cvBullet{
+                Led research-to-production development of a Motion-Detection algorithm 
+                for patient monitoring from radar signals
+                }
+            % \cvBullet{Proficient in analyzing and performing sensor fusion on multiple physiological signals, including ECG, respiration, blood pressure, and SpO\textsubscript{2}, from various sensors}
+            \cvBullet{
+                Leveraged Weights\&Biases for end-to-end experiment tracking, 
+                visualization and Data \& Models Versioning; \\ 
+                set up examples and provided training to encourage adoption of the 
+                framework by the Algo team
+                }
+            \cvBullet{
+                ML engineered Apnea-Detection DL project; implemented modular code 
+                \& configuration files to enable flexibility plugin-in alternative 
+                components like losses, architectures, metrics. 
+                This simplified experimentation and hyperparameter tuning
+                }
         }
-        \experienceEntry{Deep Learning Developer}{4/2021}{4/2022}{Percepto}{Modi'in}{}{
-            \cvBullet{Developed DL models for Change-Detection (Segmentation \& Classification) in aerial and static camera images}
-            \cvBullet{Led migration of TensorFlow-based code to PyTorch ecosystem, optimizing dataloaders, architectures, and training processes}
-            \cvBullet{Spearheaded development of synthetic data for training, improving model performance substantially}
-            \cvBullet{Monitored and analyzed production models, delivering actionable insights that significantly improved performance}
+        \experienceEntry{Deep Learning Developer}{2021}{2022}{Percepto}{Modi'in}{}{
+            \cvBullet{
+                Developed DL models for Change-Detection (Segmentation \& Classification) 
+                in aerial and static camera images
+                }
+            % \cvBullet{Developed Deep Learning models for Change-Detection (Segmentation \& Classification) in aerial and static camera images}
+            \cvBullet{
+                Led migration of TensorFlow-based code to PyTorch ecosystem, 
+                optimizing dataloaders, architectures, and training processes
+                }
+            \cvBullet{
+                Spearheaded development of synthetic data for training, 
+                substantially improving performance across multiple models
+                }
+            \cvBullet{Monitored and analyzed production models, delivering actionable 
+            insights that significantly improved performance
+            }
         }
         \experienceEntry{Algorithm Developer}{2019}{2020}{Beyond-Sense}{}{}{
+            \cvBullet{
+                Developed real-time face-recognition pipeline from video on Raspberry Pi, 
+                addressing compute power constraints
+                }
+            \cvBullet{
+                Incorporated into the pipeline face detection \& recognition, 
+                gender classification, age estimation and facial expression analysis
+                }
+            \cvBullet{
+                Designed, built, and maintained cloud database of unique face identifiers, 
+                enabling seamless edge-cloud-backend sync
+                }
             % \cvBullet{End-to-End development of a real-time, DL based Face-Recognition app running on Raspberry Pi.}
             % \cvBullet{Drove the development of a real-time face-recognition app from video on Raspberry Pi, addressing compute power constraints.}
-            \cvBullet{Developed real-time face-recognition pipeline from video on Raspberry Pi, addressing compute power constraints}
-            \cvBullet{Incorporated into the pipeline face detection \& recognition, gender classification, age estimation and facial expression analysis}
             % \cvBullet{Undertook edge device maintenance, overseeing OS installation, source code obfuscation, app installations, \& version updates.}
-            \cvBullet{Designed, built, and maintained cloud database of unique face identifiers, enabling seamless edge-cloud-backend sync}
             % \cvBullet{Led the end-to-end pipeline development, overseeing algorithms on the edge device and in the cloud.}
         }
+        % \experienceEntry{Graduate Research Student}{2012}{2018}
+        % {Prof. Marshall Devor's Lab, The Hebrew University of Jerusalem}{}{}{
+        %     \cvBullet{
+        %         Skilled in recording in vivo electrophysiological data, 
+        %         including extracellular recordings from the sciatic nerve and EEG in rats
+        %         } 
+        %     \cvBullet{
+        %         Experienced in processing and analyzing electophysiological signals 
+        %         using techniques such as filtering, spike sorting, clustering, and 
+        %         pattern analysis to study neural activity
+        %         }
+        % }
     }   
-    \section{Projects}{
-        \experienceEntry{Wounded Skin Segmentation}{2/2020}{7/2020}{}{Healty.io  $\vert$ YData | {\bfseries Distinguished Project}}{}{}{
-            \cvBullet{Successfully executed a Proof-of-Concept research on skin segmentation from clinical images of patients with chronic wounds}
-            \cvBullet{Achieved performance goals on a scarce dataset by enriching it with external open-source datasets}
-            \cvBullet{Trained and evaluated UNet-based architectures with different backbones, optimizing performance and complexity}
-        }{}
-    }
 
-    \section{Awards and Distinctions}{
-        \skillItemSingle{YDATA Industry Project}{completed with outstanding success and honors, chosen for distinction}{2020}
-        \skillItemSingle{YDATA Program}{Completed with Distinction and Excellence and Graduated with Honors}{2020}
-        \skillItemSingle{B.Sc.}{Graduated with honors | Magna Cum Laude}{2010}
-        \skillItemSingle{B.Sc.}{Was on the Dean's list}{2008/9 \& 2009/10}
+    \section{Education}{
+        \educationEntry{}{YDATA Program}{Graduated with Honors}% (Top 3\% of class)}
+            {2019}{2020}{Yandex advanced Data Science program}{Tel Aviv}{}
+        \educationEntry{M.Sc.}{Brain Sciences: Computation and Information Processing}{GPA 96}
+            {2011}{2016}{The Edmond and Lily Safra Center for Brain Sciences, Hebrew University of Jerusalem}{Jerusalem}
+            {Under the supervision of Prof.\ Marshall Devor; Studied the Neuronal Mechanisms of Neuropathic Pain}
+        \educationEntry{B.Sc.}{Cognitive Science; Life Sciences: ``ETGAR'' Honor's Program}{Magna Cum Laude, 94}
+            {2008}{2010}{The Hebrew University of Jerusalem}{Jerusalem}{
+                % \skillItemSingle{}{Graduated with {\bfseries Honors}}{\normalfont{2010}}
+                % \skillItemSingle{}{Was on the {\bfseries Dean's list}}{\normalfont{2008/9 \& 2009/10}}
+                \quad Was on the {\bfseries Dean's list} \hfill \mbox{2008/9 \& 2009/10}
+                }
+            
     }
+    \section{Projects}{
+        % \experienceEntry{Wounded Skin Segmentation}{2020}{}{}{Healty.io  $\vert$ YData | {\bfseries Distinguished Project}}{Completed with {\bfseries Outstanding Success and Honors}, chosen for {\bfseries Distinction}}{
+        %     \cvBullet{Led successful PoC research on skin segmentation from clinical images of patients with chronic wounds}
+        %     \cvBullet{Augmented scarce data with external datasets; optimized UNet-based architectures, balancing performance and complexity}
+        %     }{}
+        \experienceEntry{Wounded Skin Segmentation}{2020}{}{}{\textit{YData} Industry Project with \textit{Healty.io} | {\bfseries Top-5} project}{}{
+            \cvBullet{Led successful PoC research on skin segmentation from clinical images of patients with chronic wounds}
+            \cvBullet{Augmented scarce data with external datasets; optimized UNet-based architectures, balancing performance and complexity}
+            }{}
+    }
+    
+    
+
+    % \section{Awards and Distinctions}{
+    %     % \skillItemSingle{YDATA Industry Project}{completed with outstanding success and honors, chosen for distinction}{2020}
+    %     % \skillItemSingle{YDATA Program}{Completed with Distinction and Excellence and Graduated with Honors}{2020}
+    %     \skillItemSingle{B.Sc.}{Graduated with honors | Magna Cum Laude}{2010}
+    %     \skillItemSingle{B.Sc.}{Was on the Dean's list}{2008/9 \& 2009/10}
+    % }
 
     \section{Skills}{
-        \skillItemSingle{Programming languages}{Python (PyTorch, TensorFlow, Numpy, OpenCV, Pandas, Scikit), MATLAB}{}
-        \skillItemSingle{Technologies}{AWS (EC2, S3), Linux, Git, Weights\&Biases}{}
+        \skillItemSingle{Programming languages}{Python (PyTorch, TensorFlow, Numpy, OpenCV, Pandas, Scikit, Jupyter), MATLAB}{}
+        \skillItemSingle{Technologies}{AWS (EC2, S3), Linux, Git, VSCode, Conda \& Poetry, Weights\&Biases}{}
         \skillItemSingle{Soft skills}{Can work independently or as part of a team, self-learner, project management, tutoring colleagues}{}
     }
     % \section{Publications}{

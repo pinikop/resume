@@ -141,7 +141,7 @@
             \ifstrempty{#5}
                 {\ifstrempty{#6}{}{#6}}
                 {\ifstrempty{#6}{\emph{#5}}{\emph{#5}, #6}}
-            } & {\bfseries #3--#4}
+            } & {\bfseries#3\ifstrempty{#4}{}{|#4}}
     \end{tabular*}
     \ifstrempty{#7}{\unskip}{\\[0.5ex] \makebox[1.5ex]\small #7}  % HACK: \makebox is a hack to fix indentation
     \ifstrempty{#8}{\unskip}{\\[0.5ex] #8}
@@ -169,7 +169,7 @@
 %-------------------------------------------------------------------------------
 \newcommand*{\skillItemSingle}[4][\bulletSpacing]{
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-        {{\bfseries #2: }#3} & {\ifstrempty{#4}{}{\bfseries #4}}
+        {{\ifstrempty{#2}{}{\bfseries #2: }}#3} & {\ifstrempty{#4}{}{\bfseries #4}}
     \end{tabular*}
     \par\addvspace{#1}
 }

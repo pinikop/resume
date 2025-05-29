@@ -1,0 +1,41 @@
+# LaTeX temporary files
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Build directory
+build/
+
+# Generated PDFs (since they are built from source)
+*.pdf
+# Keep the example PDF
+!exampleCV.pdf 
+
+# Personal CV files
+myCV.tex
+
+# Archive directory for CV versions
+archive/*
+# Keep the .gitkeep file to preserve the empty archive directory
+!archive/.gitkeep
+
+# VSCode
+.vscode/
+
+# Other common LaTeX auxiliary files
+*.dvi
+*.xdv
+*.bbl
+*.blg
+*.toc
+*.lof
+*.lot
+*.idx
+*.ilg
+*.ind
+*.nav
+*.snm
+*.vrb

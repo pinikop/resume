@@ -1,0 +1,77 @@
+% Example CV using the cv-template class
+\documentclass[10pt]{cv-template}
+
+% Choose a theme: classic (default), modern, professional, nature, ruby, amethyst
+\setTheme{modern}  % Try different themes by changing this
+
+% Optionally customize the bullet style
+\setBulletStyle{bullet}{\scriptsize\textbullet}
+
+% Define name and contact details
+\name{Jane Doe}
+\phone{+1 (555) 123-4567}
+\email{jane.doe@example.com}
+\linkedin{jane-doe}
+\github{janedoe}  % Uncomment to add GitHub profile
+
+% Page margins
+\geometry{top=15mm, bottom=15mm, left=15mm, right=20mm}
+
+% Custom spacing
+\setlength{\sectionSpacing}{0ex}
+\setlength{\entrySpacing}{3ex}
+\setlength{\bulletSpacing}{1.5ex}
+
+\begin{document}
+    \maketitle
+    
+    \cvSummary{
+        Experienced [title] with [X]+ years specializing in [area]
+        and [area]. Proven track record of [accomplishment]. Passionate about [passion].
+        [more text]
+    }
+
+    \section{Experience}{
+        \experienceEntry{Job Title}{Company Name}{Location}{Start year}{End year}{}{}
+        {
+            \cvBullet{Accomplishment}
+            \cvBullet{Another accomplishment}
+            \cvBullet{Yet another accomplishment}
+        }
+
+        \experienceEntry{Another job title}{Another company name}{Another location}{Start year}{End year}{}{}
+        {
+            \cvBullet{More accomplishments}
+        }
+    }
+
+    \section{Projects}{
+        \experienceEntry{Title}{Company}{Location}{Start month/year}{End month/year}{}{}
+        {
+            \cvBullet{What the project was about}
+            \cvBullet{What I did in the project}
+        }
+    }
+
+    \section{Skills}{
+        \skillItemSingle{Programming}{[list of programming languages and libraries]}
+        \skillItemSingle{Technologies}{[list of technologies]}
+        \skillItemSingle{Tools \& Methods}{[list of tools and methods]}
+        \skillItemSingle{another set of skills}{[list of ...]}
+    }
+
+    \section{Education}{
+        \educationEntry{Degree}{Field}{GPA}{Institution}{Location}{Start year}{End year}
+        {
+            \cvBullet{Accomplishment}
+            \cvBullet{Accomplishment}
+        }
+    }
+
+    \section{Languages}{
+        \skillItemDouble{Language}{Proficiency}{Language}{Proficiency}
+    }
+
+    \recommendations
+
+\end{document} 

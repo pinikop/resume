@@ -1,0 +1,84 @@
+% CV Color Themes
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cv-themes}[2024/03/19 CV Color Themes]
+
+\RequirePackage{xcolor}
+
+%-------------------------------------------------------------------------------
+% Brand Colors (constant across themes)
+%-------------------------------------------------------------------------------
+\definecolor{gmail-red}{RGB}{212, 70, 56}      % Official Gmail red
+\definecolor{linkedin-blue}{RGB}{0, 119, 181}  % Official LinkedIn blue
+\definecolor{github-gray}{RGB}{36, 41, 46}     % Official GitHub dark gray
+
+%-------------------------------------------------------------------------------
+% Theme Color Commands
+%-------------------------------------------------------------------------------
+% Color application commands (define before themes)
+\newcommand{\themecolor@title}{primary}
+\newcommand{\themecolor@section}{primary}
+\newcommand{\themecolor@bullet}{primary}
+\newcommand{\themecolor@secondary}{secondary}
+
+% Helper commands to use theme colors
+\newcommand{\useThemeColor}[1]{\color{\csname themecolor@#1\endcsname}}
+\newcommand{\getThemeColor}[1]{\csname themecolor@#1\endcsname}
+
+%-------------------------------------------------------------------------------
+% Theme Definitions
+%-------------------------------------------------------------------------------
+% Theme command
+\newcommand{\setTheme}[1]{%
+    \ifcsname theme@#1\endcsname
+        \csname theme@#1\endcsname
+    \else
+        \PackageError{cv-themes}{Unknown theme '#1'}{Available themes: classic, modern, professional, nature, ruby, amethyst}
+    \fi
+}
+
+% Classic theme (default blue)
+\newcommand{\theme@classic}{%
+    \definecolor{primary}{RGB}{0, 119, 181}      % LinkedIn blue
+    \definecolor{secondary}{RGB}{100, 100, 100}   % Gray
+    \definecolor{accent}{RGB}{36, 41, 46}        % Dark gray
+}
+
+% Modern theme (teal-based)
+\newcommand{\theme@modern}{%
+    \definecolor{primary}{RGB}{0, 128, 128}      % Teal
+    \definecolor{secondary}{RGB}{64, 64, 64}     % Dark gray
+    \definecolor{accent}{RGB}{0, 150, 136}       % Material teal
+}
+
+% Professional theme (navy-based)
+\newcommand{\theme@professional}{%
+    \definecolor{primary}{RGB}{0, 60, 113}       % Navy
+    \definecolor{secondary}{RGB}{80, 80, 80}     % Gray
+    \definecolor{accent}{RGB}{141, 169, 196}     % Light blue
+}
+
+% Nature theme (green-based)
+\newcommand{\theme@nature}{%
+    \definecolor{primary}{RGB}{46, 125, 50}      % Forest green
+    \definecolor{secondary}{RGB}{85, 85, 85}     % Dark gray
+    \definecolor{accent}{RGB}{129, 199, 132}     % Light green
+}
+
+% Ruby theme (red-based)
+\newcommand{\theme@ruby}{%
+    \definecolor{primary}{RGB}{171, 0, 13}       % Deep red
+    \definecolor{secondary}{RGB}{75, 75, 75}     % Dark gray
+    \definecolor{accent}{RGB}{229, 115, 115}     % Light red
+}
+
+% Amethyst theme (purple-based)
+\newcommand{\theme@amethyst}{%
+    \definecolor{primary}{RGB}{75, 0, 130}       % Deep purple
+    \definecolor{secondary}{RGB}{70, 70, 70}     % Dark gray
+    \definecolor{accent}{RGB}{147, 112, 219}     % Medium purple
+}
+
+% Set default theme
+\theme@classic
+
+\endinput 

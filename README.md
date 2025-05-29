@@ -15,8 +15,8 @@ A professional CV/resume template system with theme support and automated build 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/latex-cv-template
-cd latex-cv-template
+git clone https://github.com/yourusername/resume
+cd resume
 ```
 
 2. Make a copy of the example CV:
@@ -28,14 +28,14 @@ cp example.tex myCV.tex
 
 4. Build your CV:
 ```bash
-# Basic usage (creates cv.pdf and a dated copy)
-./build.sh -s myCV.tex
+# Basic usage (creates myCV.pdf and a dated copy)
+./build.sh
 
 # Keep auxiliary files (useful for debugging)
-./build.sh -s myCV.tex -k
+./build.sh -k
 
 # Specify custom output filename
-./build.sh -s myCV.tex -t CustomName.pdf
+./build.sh -t CustomName.pdf
 ```
 
 ## Directory Structure
